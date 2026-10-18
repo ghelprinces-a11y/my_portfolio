@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghel's Portfolio</title>
+
+    <style>
+        /* SMOOTH SCROLLING */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 75px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            background: linear-gradient(to right, #ffe4ec, #e6d5ff, #d5e8ff);
+        }
+
+        /* NAVIGATION AT THE TOP */
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 18px 10px;
+            background: white;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 3px 8px #00000015;
+        }
+
+        nav a {
+            color: #663399;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 10px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+            background: #8e44ad;
+        }
+
+        /* HOME */
+        .home {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+            animation: appear 1.5s;
+            scroll-margin-top: 75px;
+        }
+
+        .home img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border: 5px solid white;
+            border-radius: 50%;
+        }
+
+        h1, h2 {
+            color: #783c99;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 22px;
+            color: white;
+            background: #8e44ad;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #663399;
+            transform: translateY(-3px);
+        }
+
+        /* CONTENT SECTIONS */
+        section {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 25px;
+            background: white;
+            border: 1px solid #f0d9f5;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px #00000012;
+            scroll-margin-top: 85px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .project {
+            flex: 1 1 220px;
+            padding: 15px;
+            background: #fce4ec;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
+        .project img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        /* BACK TO TOP BUTTON */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #8e44ad;
+            color: white;
+            font-size: 25px;
+            text-decoration: none;
+            border-radius: 50%;
+            box-shadow: 0 3px 8px #00000030;
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: #663399;
+            transform: translateY(-3px);
+        }
+
+        /* ANIMATION */
+        @keyframes appear {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* MOBILE DESIGN */
+        @media (max-width: 600px) {
+            .home h1 {
+                font-size: 28px;
+            }
+
+            .home {
+                padding: 30px 15px;
+            }
+
+            section {
+                margin: 15px;
+                padding: 20px;
+            }
+
+            nav {
+                gap: 5px;
+                padding: 10px 5px;
+            }
+
+            nav a {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .projects {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION AT THE VERY TOP -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- HOME -->
+    <div class="home" id="home">
+        <img src="./ghel.jpg" alt="Photo of Ghel">
+
+        <h1>Hello, I'm Ghel!</h1>
+        <p><strong>Princess Ghel S. Vedeja</strong></p>
+        <p>Association in Computer Technology Student</p>
+
+        <p>
+            I enjoy learning about technology, programming,
+            and website design.
+            <br>
+            <strong>Every new skill is a step toward my dreams.</strong>
+        </p>
+
+        <a class="button" href="#about">Explore My Portfolio</a>
+    </div>
+
+    <!-- ABOUT ME -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <p>
+            Hello! My name is Princess Ghel S. Vedeja.
+            I am a second-year Association in Computer Technology
+            student at Datamex College of Saint Adeline.
+        </p>
+
+        <p>
+            My hobbies include watching videos, learning new things,
+            exploring creative ideas, and spending time with my family.
+            I am interested in computers, programming, and website design.
+        </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <ul>
+            <li>HTML - creating webpages</li>
+            <li>CSS - designing webpages</li>
+            <li>Python - basic programming</li>
+            <li>Database - organizing information</li>
+            <li>Oracle SQL - practicing database commands</li>
+            <li>Teamwork - working with other people</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <img src="./pet.png"
+                     alt="Pet Information System screenshot">
+
+                <h3>1. Pet Information Management System</h3>
+
+                <p>
+                    A Python program to add, view, search,
+                    update, and delete pet information.
+                </p>
+
+                <p><strong>Tools:</strong> Python and JSON</p>
+            </div>
+
+            <div class="project">
+                <img src="./reg.jpg"
+                     alt="Registration Form screenshot">
+
+                <h3>2. Registration Form</h3>
+
+                <p>
+                    A webpage with text fields and a simple
+                    registration form design.
+                </p>
+
+                <p><strong>Tools:</strong> HTML and CSS</p>
+            </div>
+
+            <div class="project">
+                <img src="./pos.jpg"
+                     alt="MEAD Marketing POS-INV screenshot">
+
+                <h3>3. MEAD Marketing POS-INV</h3>
+
+                <p>
+                    A school project for managing store sales
+                    and inventory.
+                </p>
+
+                <p><strong>Tools:</strong> VB.NET and database concepts</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <h2>My Achievements</h2>
+
+        <p>
+            I continue to learn through school activities,
+            programming exercises, and group projects.
+            These experiences help me improve my knowledge and skills.
+        </p>
+    </section>
+
+    <!-- FUTURE GOALS -->
+    <section id="goals">
+        <h2>My Future Goals</h2>
+
+        <p>
+            My goals are to finish my studies, improve my programming
+            skills, find a stable career, and help my family in the future.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <p>
+            Email:
+            <a href="mailto:vedeja.princessghel.senesio@gmail.com">
+                vedeja.princessghel.senesio@gmail.com
+            </a>
+        </p>
+
+        <p>
+            Instagram:
+            <a href="https://www.instagram.com/ifykyk_ivdchngd/"
+               target="_blank" rel="noopener">
+                @hokia_kazi
+            </a>
+        </p>
+
+        <p>
+            Facebook:
+            <a href="https://www.facebook.com/share/19hfAipxai/"
+               target="_blank" rel="noopener">
+                Ghel
+            </a>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Princess Ghel Vedeja - My Personal Portfolio</p>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+
+</body>
+</html>
